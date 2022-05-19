@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WEB - JavaScript</title>
+  </head>
+  <body>
+    <h1>input night/day changer</h1>
+    <input id="changer" type="button" value="night" onclick="
+      if(document.querySelector('#changer').value==='night') {
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#changer').value='day';
+      } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#changer').value='night';
+      }
+    ">
+    <br>
+    <h1>Refactoring-2step</h1>
+    <h2>1.document.querySelector('#changer')=this</h2>
+    <input type="button" value="night" onclick="
+      if(this.value==='night') {
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        this.value='day';
+      } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        this.value='night';
+      }
+    ">
+    <h2>2.doument.querySelector('body')=target</h2>
+    <input type="button" value="night" onclick="
+    var target=document.querySelector('body');
+    if(this.value==='night') {
+      target.style.backgroundColor='black';
+      target.style.color='white';
+      this.value='day';
+    } else {
+      target.style.backgroundColor='white';
+      target.style.color='black';
+      this.value='night';
+    }
+  ">
+    <p style="margin-top:50px">
+      <strong>JavaScript (/ˈdʒɑːvəskrɪpt/)</strong>, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.[11] Over 97% of websites use JavaScript on the client side for web page behavior,[12] often incorporating third-party libraries.[13] All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+    </p>
+  </body>
+</html>
