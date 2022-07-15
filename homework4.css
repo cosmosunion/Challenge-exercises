@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-yellow: #ffce32;
+  --gray: #d6d6d6;
+  --content-padding: 0 20px;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relatve;
+}
+/* 메뉴 */
+header {
+  width: 380px;
+  height: 15vh;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 검색창 */
+.searchbar {
+  width: 365px;
+  height: 50px;
+  color: var(--gray);
+  font-weight: 900;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 3px 10px gainsboro;
+  padding: 0px 30px;
+  position: fixed;
+  top: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* content */
+.main-content {
+  width: 400px;
+  height: 84vh;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-content__column {
+  padding: var(--content-padding);
+}
+
+.main-content__column:nth-child(1) {
+  height: 250px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.main-content__column:nth-child(2) {
+  height: 240px;
+}
+.main-content__column:nth-child(3) {
+  height: 240px;
+}
+
+/* Book of the day */
+.main-content__title {
+  font-size: 23px;
+  font-weight: 900;
+  margin: 20px 0;
+}
+.main-content__profile {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content__profile img {
+  max-width: 120px;
+  max-height: 180px;
+  border-radius: 15px;
+}
+.main-content__profile-data {
+  width: 220px;
+  height: 170px;
+  padding-left: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 110%;
+}
+.main-content__profile-data-buttons__bookmark {
+  width: 50px;
+  height: 50px;
+}
+.ratings {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--main-yellow);
+}
+.ratings__rate:last-child {
+  color: var(--gray);
+}
+.main-content__profile-data-category {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-content__profile-data-category div {
+  width: 80px;
+  background-color: var(--gray);
+  border-radius: 10px;
+  padding: 8px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+.main-content__profile-data-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-content__profile-data-buttons__bookmark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--main-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content__profile-data-buttons__purchase {
+  width: 120px;
+  height: 40px;
+  margin-right: 15px;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Top Adventures */
+.top-lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-lists__list {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.top-lists__list:first-child {
+  margin-left: 0;
+}
+.top-lists__list img {
+  max-width: 80px;
+  max-height: 120px;
+  border-radius: 10px;
+}
+
+.top-lists__list .ratings {
+  width: 70px;
+  padding: 15px 0;
+  font-size: 10px;
+}
+
+/* popular authors */
+.main-content__popular-authors {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content__popular-authors img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 15px;
+}
+.main-content__popular-authors__details {
+  padding-left: var(--content-padding);
+}
+.main-content__popular-authors__details h2 {
+  padding-bottom: 8px;
+}
